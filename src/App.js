@@ -1,28 +1,3 @@
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Container, Row, Col, Card } from 'react-bootstrap'; // Import Bootstrap components
@@ -93,23 +68,8 @@ function App() {
   return (
     <Router>
       <Container>
-        <h1 className="mt-4 mb-4">Drinks</h1>
-        <Row>
-          {drinks.map((item) => (
-            <Col key={item.id} md={4} className="mb-4">
-              <Card>
-                <Card.Body>
-                  <Card.Title>{item.name}</Card.Title>
-                  <Card.Text>
-                    Type: {item.type}
-                    <br />
-                    Quantity: {item.quantity}
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+        <h1 className="mt-4 mb-4">DashBoard</h1>
+        
         <Row>
           
             <Col md={4} className="mb-4">
@@ -123,10 +83,7 @@ function App() {
                 </Card.Body>
               </Card>
             </Col>
-            
-        </Row>
-        <Row>
-          
+
             <Col md={4} className="mb-4">
               <Card>
                 <Card.Body>
@@ -138,9 +95,7 @@ function App() {
                 </Card.Body>
               </Card>
             </Col>
-        </Row>
-        <Row>
-          
+
             <Col md={4} className="mb-4">
               <Card>
                 <Card.Body>
@@ -153,6 +108,8 @@ function App() {
               </Card>
             </Col>
         </Row>
+        
+        
       </Container>
       <Routes>
         {/* Define the route for DrinkDetailsPage */}
