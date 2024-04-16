@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import DrinkDetailsPage from './DrinkDetailsPage';
 import OrderDetailsPage from './OrderDetailsPage';
 import ReceiptDetailsPage from './ReceiptDetailsPage';
+import ClientDetailsPage from './ClientDetailsPage';
+import CargoDetailsPage from './CargoDetailsPage';
 
 
 function App() {
@@ -18,7 +20,7 @@ function App() {
     const fetchData = async () => {
       try {
         // drinkResponse
-        const drinkResponse = await fetch('http://localhost:8123/api/drinks')
+        const drinkResponse = await fetch('http://localhost:8123/api/drinks');
         if (!drinkResponse.ok) {
           console.log('Failed to fetch drinks',drinkResponse);
         }
@@ -41,22 +43,22 @@ function App() {
        const receiptsData = await receiptsResponse.json();
        setReceipts(receiptsData);
 
-      //  // clientsResponse
-      //  const clientsResponse = await fetch('http://localhost:8123/api/clients');
-      //  if (!clientsResponse.ok){
-      //    throw new Error('Failed to fetch client');
-      //  }
-      //  const clientsData = await clientsResponse.json();
-      //  setClients(clientsData);
+       // clientsResponse
+       const clientsResponse = await fetch('http://localhost:8123/api/clients');
+       if (!clientsResponse.ok){
+         throw new Error('Failed to fetch client');
+       }
+       const clientsData = await clientsResponse.json();
+       setClients(clientsData);
 
 
-//        // cargosResponse
-//        const cargosResponse = await fetch('http://localhost:8123/api/cargos');
-//        if (!cargosResponse.ok){
-//          throw new Error('Failed to fetch cargos');
-//        }
-//        const cargosData = await cargosResponse.json();
-//        setCargos(cargosData);
+       // cargosResponse
+       const cargosResponse = await fetch('http://localhost:8123/api/cargos');
+       if (!cargosResponse.ok){
+         throw new Error('Failed to fetch cargos');
+       }
+       const cargosData = await cargosResponse.json();
+       setCargos(cargosData);
       } catch (error) {
         console.error('Error fetching drinks:', error);
       }
@@ -68,46 +70,85 @@ function App() {
   return (
     <Router>
       <Container>
-        <h1 className="mt-4 mb-4">DashBoard</h1>
+      <h1 className="mt-4 mb-4" >Shop24</h1>
+        <h4 className="mt-4 mb-4">DashBoard</h4>
+        <hr></hr>
         
         <Row>
-          
+
+          {/* Drink */}
+
             <Col md={4} className="mb-4">
-              <Card>
+              <Card className="d-flex align-items-center justify-content-center"> 
                 <Card.Body>
-                  <Card.Title>Drinks</Card.Title>
+                  <Card.Title style={{ fontSize: '2rem', fontWeight: '1000', textDecoration: 'none'}}>Drinks</Card.Title>
                   <Card.Text>
                   {/* Render a link based on the length of drinks array */}
-                  <Link to={drinks.length > 0 ? '/drink-details' : '/'}>{drinks.length}</Link>
+                  <Link to={drinks.length > 0 ? '/drink-details' : '/'}style={{fontSize: '2rem', display: 'block', textAlign: 'center', textDecoration: 'none', fontWeight: 'bold' }}>{drinks.length}</Link>
                 </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
 
+            {/* Orders */}
+            
             <Col md={4} className="mb-4">
-              <Card>
+              <Card className="d-flex align-items-center justify-content-center">
                 <Card.Body>
-                  <Card.Title>Orders</Card.Title>
+                  <Card.Title style={{ fontSize: '2rem', fontWeight: '1000', textDecoration: 'none'}}>Orders </Card.Title>
                   <Card.Text>
                   {/* Render a link based on the length of drinks array */}
-                  <Link to={orders.length > 0 ? '/order-details' : '/'}>{orders.length}</Link>
+                  <Link to={orders.length > 0 ? '/order-details' : '/'} style={{fontSize: '2rem', display: 'block', textAlign: 'center', textDecoration: 'none', fontWeight: 'bold' }}>
+                    {orders.length}
+                  </Link>
                 </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
 
+            {/* Receipts */}
+
             <Col md={4} className="mb-4">
-              <Card>
+              <Card className="d-flex align-items-center justify-content-center">
                 <Card.Body>
-                  <Card.Title>Receipts</Card.Title>
+                  <Card.Title style={{ fontSize: '2rem', fontWeight: '1000', textDecoration: 'none'}}>Receipts</Card.Title>
                   <Card.Text>
                   {/* Render a link based on the length of drinks array */}
-                  <Link to={receipts.length > 0 ? '/receipts-details' : '/'}>{receipts.length}</Link>
+                  <Link to={receipts.length > 0 ? '/receipts-details' : '/'}style={{fontSize: '2rem', display: 'block', textAlign: 'center', textDecoration: 'none', fontWeight: 'bold' }}>{receipts.length}</Link>
+                </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            {/* Clients */}
+
+            <Col md={4} className="mb-4">
+              <Card className="d-flex align-items-center justify-content-center">
+                <Card.Body>
+                  <Card.Title style={{ fontSize: '2rem', fontWeight: '1000', textDecoration: 'none'}}>Clients</Card.Title>
+                  <Card.Text>
+                  {/* Render a link based on the length of drinks array */}
+                  <Link to={clients.length > 0 ? '/clients-details' : '/'}style={{fontSize: '2rem', display: 'block', textAlign: 'center', textDecoration: 'none', fontWeight: 'bold' }}>{clients.length}</Link>
+                </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            
+            {/* Cargo */}
+
+            <Col md={4} className="mb-4">
+              <Card className="d-flex align-items-center justify-content-center">
+                <Card.Body>
+                  <Card.Title style={{ fontSize: '2rem', fontWeight: '1000', textDecoration: 'none'}}>Cargo</Card.Title>
+                  <Card.Text>
+                  {/* Render a link based on the length of drinks array */}
+                  <Link to={cargos.length > 0 ? '/cargos-details' : '/'}style={{fontSize: '2rem', display: 'block', textAlign: 'center', textDecoration: 'none', fontWeight: 'bold' }}>{cargos.length}</Link>
                 </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
         </Row>
+        
         
         
       </Container>
@@ -116,6 +157,8 @@ function App() {
         <Route path="/drink-details" element={<DrinkDetailsPage drinks={drinks} />} />
         <Route path="/order-details" element={<OrderDetailsPage orders={orders} />} />
         <Route path="/receipts-details" element={<ReceiptDetailsPage receipts={receipts} />} />
+        <Route path="/clients-details" element={<ClientDetailsPage clients={clients} />} />
+        <Route path="/cargos-details" element={<CargoDetailsPage cargos={cargos} />} />
       </Routes>
        
     </Router>
