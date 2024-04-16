@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Container, Row, Col, Card } from 'react-bootstrap'; // Import Bootstrap components
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom';
 import DrinkDetailsPage from './DrinkDetailsPage';
 import OrderDetailsPage from './OrderDetailsPage';
 import ReceiptDetailsPage from './ReceiptDetailsPage';
@@ -71,8 +71,9 @@ function App() {
     <Router>
       <Container>
       <h1 className="mt-4 mb-4" >Shop24</h1>
-        <h4 className="mt-4 mb-4">DashBoard</h4>
+        <h4 className="mt-4 mb-4">DashBoard <a href="http://localhost:3000">Reload</a></h4>
         <hr></hr>
+        <br></br>
         
         <Row>
 
@@ -154,13 +155,14 @@ function App() {
       </Container>
       <Routes>
         {/* Define the route for DrinkDetailsPage */}
+        
         <Route path="/drink-details" element={<DrinkDetailsPage drinks={drinks} />} />
         <Route path="/order-details" element={<OrderDetailsPage orders={orders} />} />
         <Route path="/receipts-details" element={<ReceiptDetailsPage receipts={receipts} />} />
         <Route path="/clients-details" element={<ClientDetailsPage clients={clients} />} />
         <Route path="/cargos-details" element={<CargoDetailsPage cargos={cargos} />} />
       </Routes>
-       
+      
     </Router>
   );
 }
