@@ -4,10 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 function DrinkDetailsPage({ drinks }) {
   return (
-    <div>
-      <h1>Drink Details</h1>
-      <table className="table">
-        <thead>
+    <div className="container">
+      <h1 className="text-center">Drink Details</h1>
+      <div className="row justify-content-center">
+        <div className="col-md-10">
+          <table className="table">
+            <thead className="thead-dark">
           <tr>
             <th>Name</th>
             <th>Type</th>
@@ -23,7 +25,9 @@ function DrinkDetailsPage({ drinks }) {
             </tr>
           ))}
         </tbody>
-      </table>
+          </table>
+        </div>
+      </div>
     </div>
   );
 }
