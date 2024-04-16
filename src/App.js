@@ -1,25 +1,106 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           Edit <code>src/App.js</code> and save to reload.
+//         </p>
+//         <a
+//           className="App-link"
+//           href="https://reactjs.org"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           Learn React
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
+
+// export default App;
+import React, { useState, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import { Container, Row, Col, Card } from 'react-bootstrap'; // Import Bootstrap components
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import {Switch} from 'react-router-dom';
+import DrinkDetailsPage from './DrinkDetailsPage';
+
+
 
 function App() {
+  const [drinks, setDrinks] = useState([]);
+  const [orders, setOrders] = useState([]);
+  const [receipts, setReceipts] = useState([]);
+  const [clients, setClients] = useState([]);
+  const [cargos, setCargos] = useState([]);
+
+  useEffect(() => {
+    const fetchDrinks = async () => {
+      try {
+        // drinkResponse
+        const response = await fetch('http://localhost:8123/api/drinks');
+        if (!response.ok) {
+          throw new Error('Failed to fetch drinks');
+        }
+        const data = await response.json();
+        setDrinks(data);
+      } catch (error) {
+        console.error('Error fetching drinks:', error);
+      }
+    };
+
+    fetchDrinks();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Container>
+        <h1 className="mt-4 mb-4">Drinks</h1>
+        <Row>
+          {drinks.map((item) => (
+            <Col key={item.id} md={4} className="mb-4">
+              <Card>
+                <Card.Body>
+                  <Card.Title>{item.name}</Card.Title>
+                  <Card.Text>
+                    Type: {item.type}
+                    <br />
+                    Quantity: {item.quantity}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+        <Row>
+          
+            <Col md={4} className="mb-4">
+              <Card>
+                <Card.Body>
+                  <Card.Title>Drinks</Card.Title>
+                  <Card.Text>
+                  {/* Render a link based on the length of drinks array */}
+                  <Link to={drinks.length > 0 ? '/drink-details' : '/'}>{drinks.length}</Link>
+                </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+        </Row>
+      </Container>
+      <Routes>
+        {/* Define the route for DrinkDetailsPage */}
+        <Route path="/drink-details" element={<DrinkDetailsPage drinks={drinks} />} />
+      </Routes>
+       
+    </Router>
   );
 }
 
 export default App;
+
+
