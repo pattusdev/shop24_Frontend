@@ -40,21 +40,54 @@ function App() {
   const [cargos, setCargos] = useState([]);
 
   useEffect(() => {
-    const fetchDrinks = async () => {
+    const fetchData = async () => {
       try {
         // drinkResponse
-        const response = await fetch('http://localhost:8123/api/drinks');
-        if (!response.ok) {
-          throw new Error('Failed to fetch drinks');
+        const drinkResponse = await fetch('http://localhost:8123/api/drinks')
+             if (!drinkResponse.ok) {
+            console.log('Failed to fetch drinks',drinkResponse);
         }
-        const data = await response.json();
-        setDrinks(data);
+        const drinkData = await drinkResponse.json()
+        setDrinks(drinkData);
+
+//        // ordersResponse
+//        const ordersResponse = await fetch('http://localhost:8123/api/orders');
+//        if (!ordersResponse.ok){
+//          throw new Error('Failed to fetch orders');
+//        }
+//        const ordersData = await ordersResponse.json();
+//        setOrders(ordersData);
+//
+//        // receiptsResponse
+//        const receiptsResponse = await fetch('http://localhost:8123/api/receipts');
+//        if (!receiptsResponse.ok){
+//          throw new Error('Failed to fetch receipt');
+//        }
+//        const receiptsData = await receiptsResponse.json();
+//        setReceipts(receiptsData);
+//
+//        // clientsResponse
+//        const clientsResponse = await fetch('http://localhost:8123/api/clients');
+//        if (!clientsResponse.ok){
+//          throw new Error('Failed to fetch client');
+//        }
+//        const clientsData = await clientsResponse.json();
+//        setClients(clientsData);
+//
+//
+//        // cargosResponse
+//        const cargosResponse = await fetch('http://localhost:8123/api/cargos');
+//        if (!cargosResponse.ok){
+//          throw new Error('Failed to fetch cargos');
+//        }
+//        const cargosData = await cargosResponse.json();
+//        setCargos(cargosData);
       } catch (error) {
         console.error('Error fetching drinks:', error);
       }
     };
 
-    fetchDrinks();
+    fetchData();
   }, []);
 
   return (
