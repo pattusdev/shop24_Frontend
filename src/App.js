@@ -70,8 +70,8 @@ function App() {
   return (
     <Router>
       <Container>
-      <h1 className="mt-4 mb-4" >Shop24</h1>
-        <h4 className="mt-4 mb-4">DashBoard <a href="http://localhost:3000">Reload</a></h4>
+      <h1 className="mt-4 mb-4 text-primary" >Shop24</h1>
+        <h4 className="mt-4 mb-4 text-secondary">DashBoard <a href="http://localhost:3000">Reload</a></h4>
         <hr></hr>
         <br></br>
         
@@ -79,10 +79,10 @@ function App() {
 
           {/* Drink */}
 
-            <Col md={4} className="mb-4">
-              <Card className="d-flex align-items-center justify-content-center"> 
+            <Col md={3} className="mb-4">
+              <Card className="d-flex align-items-center justify-content-center dashboard-card "> 
                 <Card.Body>
-                  <Card.Title style={{ fontSize: '2rem', fontWeight: '1000', textDecoration: 'none'}}>Drinks</Card.Title>
+                  <Card.Title>Drinks</Card.Title>
                   <Card.Text>
                   {/* Render a link based on the length of drinks array */}
                   <Link to={drinks.length > 0 ? '/drink-details' : '/'}style={{fontSize: '2rem', display: 'block', textAlign: 'center', textDecoration: 'none', fontWeight: 'bold' }}>{drinks.length}</Link>
@@ -93,10 +93,10 @@ function App() {
 
             {/* Orders */}
             
-            <Col md={4} className="mb-4">
-              <Card className="d-flex align-items-center justify-content-center">
+            <Col md={3} className="mb-4">
+              <Card className="d-flex align-items-center justify-content-center dashboard-card">
                 <Card.Body>
-                  <Card.Title style={{ fontSize: '2rem', fontWeight: '1000', textDecoration: 'none'}}>Orders </Card.Title>
+                  <Card.Title>Orders </Card.Title>
                   <Card.Text>
                   {/* Render a link based on the length of drinks array */}
                   <Link to={orders.length > 0 ? '/order-details' : '/'} style={{fontSize: '2rem', display: 'block', textAlign: 'center', textDecoration: 'none', fontWeight: 'bold' }}>
@@ -109,10 +109,10 @@ function App() {
 
             {/* Receipts */}
 
-            <Col md={4} className="mb-4">
-              <Card className="d-flex align-items-center justify-content-center">
+            <Col md={3} className="mb-4">
+              <Card className="d-flex align-items-center justify-content-center dashboard-card">
                 <Card.Body>
-                  <Card.Title style={{ fontSize: '2rem', fontWeight: '1000', textDecoration: 'none'}}>Receipts</Card.Title>
+                  <Card.Title>Receipts</Card.Title>
                   <Card.Text>
                   {/* Render a link based on the length of drinks array */}
                   <Link to={receipts.length > 0 ? '/receipts-details' : '/'}style={{fontSize: '2rem', display: 'block', textAlign: 'center', textDecoration: 'none', fontWeight: 'bold' }}>{receipts.length}</Link>
@@ -123,10 +123,10 @@ function App() {
 
             {/* Clients */}
 
-            <Col md={4} className="mb-4">
-              <Card className="d-flex align-items-center justify-content-center">
+            <Col md={3} className="mb-4">
+              <Card className="d-flex align-items-center justify-content-center dashboard-card">
                 <Card.Body>
-                  <Card.Title style={{ fontSize: '2rem', fontWeight: '1000', textDecoration: 'none'}}>Clients</Card.Title>
+                  <Card.Title>Clients</Card.Title>
                   <Card.Text>
                   {/* Render a link based on the length of drinks array */}
                   <Link to={clients.length > 0 ? '/clients-details' : '/'}style={{fontSize: '2rem', display: 'block', textAlign: 'center', textDecoration: 'none', fontWeight: 'bold' }}>{clients.length}</Link>
@@ -137,10 +137,10 @@ function App() {
             
             {/* Cargo */}
 
-            <Col md={4} className="mb-4">
-              <Card className="d-flex align-items-center justify-content-center">
+            <Col md={3} className="mb-4">
+              <Card className="d-flex align-items-center justify-content-center dashboard-card">
                 <Card.Body>
-                  <Card.Title style={{ fontSize: '2rem', fontWeight: '1000', textDecoration: 'none'}}>Cargo</Card.Title>
+                  <Card.Title>Cargo</Card.Title>
                   <Card.Text>
                   {/* Render a link based on the length of drinks array */}
                   <Link to={cargos.length > 0 ? '/cargos-details' : '/'}style={{fontSize: '2rem', display: 'block', textAlign: 'center', textDecoration: 'none', fontWeight: 'bold' }}>{cargos.length}</Link>
