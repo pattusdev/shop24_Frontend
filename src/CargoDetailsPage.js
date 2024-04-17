@@ -4,10 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 function CargoDetailsPage({ cargos }) {
   return (
     <div className="container">
-      <h1 className="text-center">Cargo Details</h1>
+      <h1 className="text-center text-primary">Cargo Details</h1>
       <div className="row justify-content-center">
         <div className="col-md-10">
-          <table className="table">
+          <table className="table table-bordered table-striped">
             <thead className="thead-dark">
               <tr>
                 <th>Name</th>
