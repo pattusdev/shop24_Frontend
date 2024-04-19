@@ -7,6 +7,7 @@ import OrderDetailsPage from './OrderDetailsPage';
 import ReceiptDetailsPage from './ReceiptDetailsPage';
 import ClientDetailsPage from './ClientDetailsPage';
 import CargoDetailsPage from './CargoDetailsPage';
+import Navigation from './Navigation';
 
 
 function App() {
@@ -69,8 +70,9 @@ function App() {
 
   return (
     <Router>
+      <Navigation/>
       <Container>
-      <h1 className="mt-4 mb-4 text-primary" >Shop24</h1>
+      
         <h4 className="mt-4 mb-4 text-secondary">DashBoard <a href="http://localhost:3000">Reload</a></h4>
         <hr></hr>
         <br></br>
