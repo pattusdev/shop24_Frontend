@@ -78,3 +78,9 @@ existing retailer companies/hotels. Practically, they will build a set of APIs t
 Shop24 and transport to their clients. They would like your help building these APIs and document them using swagger
 
 ## Technology constraints
+▪ At the Bank of Kigali, we currently have a microservices architecture with services mostly written in Spring Boot (Java or Kotlin). We
+would like you to develop a single service in either Spring Boot that exposes several REST endpoints (see next page)
+
+▪ You can use whatever database you want (we recommend using SQLlite, MySQL or Postgres)
+
+▪ You should include a README file that has instructions for us to get the solution running on our machines
