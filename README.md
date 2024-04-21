@@ -70,8 +70,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-### Introduction to Shop24
-## Who is Shop24?
+# Introduction to Shop24
+### Who is Shop24?
 
 Shop24 is a soft drinks wholesaler based in Kigali. They would like to avail their services to public by providing a white-label solution to the
 existing retailer companies/hotels. Practically, they will build a set of APIs that hotels will use to manage their requests of buying from
@@ -97,3 +97,5 @@ would like you to develop a single service in either Spring Boot that exposes se
 ▪ Your ability to document APIs
 
 ▪ Bonus points if you include tests in your solution
+
+## API Requirements for Shop24
