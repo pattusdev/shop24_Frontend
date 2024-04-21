@@ -86,3 +86,14 @@ would like you to develop a single service in either Spring Boot that exposes se
 ▪ You should include a README file that has instructions for us to get the solution running on our machines
 
 ## What are we looking to test?
+▪ The overall software architecture of the application
+
+▪ The structure and quality of the code itself
+
+▪ The use of well-known patterns for REST and Sprint development
+
+▪ Your ability to model the problem domain (data models andAPIs)
+
+▪ Your ability to document APIs
+
+▪ Bonus points if you include tests in your solution
