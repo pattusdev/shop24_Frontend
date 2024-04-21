@@ -84,3 +84,5 @@ would like you to develop a single service in either Spring Boot that exposes se
 ▪ You can use whatever database you want (we recommend using SQLlite, MySQL or Postgres)
 
 ▪ You should include a README file that has instructions for us to get the solution running on our machines
+
+## What are we looking to test?
