@@ -6,14 +6,14 @@ function Navigation() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#" className="fw-bold fs-4 text-primary">Shop24</Navbar.Brand>
+        <Navbar.Brand href="/" className="fw-bold fs-4 text-primary">Shop24</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            {/* Nav Links on the right side */}
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/about">About</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
+            <Nav.Link as={Link} to="/dashboard">DashBoard</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <FormControl
