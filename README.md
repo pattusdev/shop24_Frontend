@@ -61,7 +61,7 @@ This Shop24 react app needs to fetch data(JSON) from our server `http://localhos
 - ## Dashboard and CRUD Function
 
 
-- ## click on blue numbers to bring the table and this Dashboard is very responsive even if in Create and Delete automatic refresh no need to reload
+- click on blue numbers to bring the table and this Dashboard is very responsive even if in Create and Delete automatic refresh no need to reload
 
 
 ![alt text](image-2.png)
