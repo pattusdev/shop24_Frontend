@@ -60,7 +60,7 @@ This Shop24 react app needs to fetch data(JSON) from our server `http://localhos
 
 # Dashboard and CRUD Function
 
-### we need to click on blue numbers to bring the table
+### we need to click on blue numbers to bring the table and this Dashboard us very responsive even if in Create and Delete automatic refresh no need to reload
 
 ![alt text](image-2.png)
 
