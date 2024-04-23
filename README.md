@@ -72,6 +72,6 @@ This Shop24 react app needs to fetch data(JSON) from our server `http://localhos
 
 ![alt text](image-3.png)
 
-- Window prompt
+- ## Window prompt
 
 ![alt text](image-4.png)
