@@ -60,9 +60,9 @@ This Shop24 react app needs to fetch data(JSON) from our server `http://localhos
 
 # Dashboard and CRUD Function
 
-![alt text](image-2.png)
+### we need to click on blue numbers to bring the table
 
-### we need to click on blue numbers to bring the table :)
+![alt text](image-2.png)
 
 ![alt text](image-3.png)
 
