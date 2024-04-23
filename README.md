@@ -22,7 +22,7 @@ You may also see any lint errors in the console.
 
 ### Who is Shop24?
 
-Shop24 is a soft drinks wholesaler based in Kigali. They would like to avail their services to public by providing a white-label solution to the
+Shop24 is a soft drinks wholesaler based in Kigali. They would like to avail their services to the public by providing a white-label solution to the
 existing retailer companies/hotels. Practically, they will build a set of APIs that hotels will use to manage their requests of buying from
 Shop24 and transport to their clients. They would like your help building these APIs and document them using swagger
 
@@ -46,29 +46,27 @@ Shop24 and transport to their clients. They would like your help building these 
 
 # How it Works!
 
-This Shop24 react app needs to fetch data(JSON) from our server `http://localhost:8123/` and React will handle Data
+This Shop24 react app needs to fetch data(JSON) from our server `http://localhost:8123/` and React will handle the Data
 
-- For example
+- ## For example
 
 ![alt text](image-5.png)
 
 # The View
 
-- but we focused on the Project Dashboard
+- ## but we focused on the Project Dashboard
 
 ![alt text](image-1.png)
 
-# Dashboard and CRUD Function
+- ## Dashboard and CRUD Function
 
-<<<<<<< HEAD
-- we need to click on blue numbers to bring the table and this Dashboard us very responsive even if in Create and Delete automatic refresh no need to reload
-=======
-#### Click on blue numbers to bring the table and this Dashboard is very responsive even if in Create and Delete automatic refresh no need to reload
->>>>>>> 2e888ad22b6f211baa967d4b823a0f5a004ac8ce
+
+- ## click on blue numbers to bring the table and this Dashboard is very responsive even if in Create and Delete automatic refresh no need to reload
+
 
 ![alt text](image-2.png)
 
-- ShowForm and Model Show
+- ## ShowForm and Model Show
 
 ![alt text](image-3.png)
 
