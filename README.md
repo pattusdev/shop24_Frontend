@@ -44,6 +44,14 @@ Shop24 and transport to their clients. They would like your help building these 
 
 ![alt text](image.png)
 
+# How it Works!
+
+This Shop24 react app needs to fetch data(JSON) from our server `http://localhost:8123/` and React will handle Data
+
+- For example
+
+![alt text](image-5.png)
+
 # http://localhost:3000 View
 
 - but we focused on the Project Dashboard
