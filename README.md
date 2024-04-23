@@ -52,7 +52,7 @@ This Shop24 react app needs to fetch data(JSON) from our server `http://localhos
 
 ![alt text](image-5.png)
 
-# http://localhost:3000 View
+# The View
 
 - but we focused on the Project Dashboard
 
