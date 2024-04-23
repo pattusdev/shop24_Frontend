@@ -69,33 +69,46 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+### Shop24
 
-# Introduction to Shop24
+BPR Internship Shop24 Challenge
+
+## Introduction to Shop24
+
 ### Who is Shop24?
 
 Shop24 is a soft drinks wholesaler based in Kigali. They would like to avail their services to public by providing a white-label solution to the
 existing retailer companies/hotels. Practically, they will build a set of APIs that hotels will use to manage their requests of buying from
 Shop24 and transport to their clients. They would like your help building these APIs and document them using swagger
 
-## Technology constraints
-▪ At the Bank of Kigali, we currently have a microservices architecture with services mostly written in Spring Boot (Java or Kotlin). We
-would like you to develop a single service in either Spring Boot that exposes several REST endpoints (see next page)
+### Technology constraints
 
-▪ You can use whatever database you want (we recommend using SQLlite, MySQL or Postgres)
+• At the BPR PLC Bank, we currently have a microservices architecture with services mostly written in Spring Boot (Java or Kotlin).
 
-▪ You should include a README file that has instructions for us to get the solution running on our machines
+• We would like you to develop a single service in either Spring Boot that exposes several REST endpoints (see next page)
 
-## What are we looking to test?
-▪ The overall software architecture of the application
+• You can use whatever database you want (we recommend using SQLite, MySQL or Postgres)
 
-▪ The structure and quality of the code itself
+• You should include a README file that has instructions for us to get the solution running on our machines
 
-▪ The use of well-known patterns for REST and Sprint development
+# Technologies Used
 
-▪ Your ability to model the problem domain (data models andAPIs)
+- React v18
 
-▪ Your ability to document APIs
+# Dependencies Used
 
-▪ Bonus points if you include tests in your solution
+![alt text](image.png)
 
-## API Requirements for Shop24
+# http://localhost:3000 View
+
+- but we focused on the Project Dashboard
+
+![alt text](image-1.png)
+
+# Dashboard and CRUD Function
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+![alt text](image-4.png)
