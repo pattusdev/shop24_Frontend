@@ -23,3 +23,8 @@ code {
   position: absolute;
   bottom:0;
 }
+
+.scrollable {
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+}
