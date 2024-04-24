@@ -60,7 +60,7 @@ function OrderDetailsPage() {
                 <tr key={order.id}>
                   <td>{order.timestamp.join('-')}</td>
                   <td>{order.status}</td>
-                  <td>{order.client.name}</td>
+                  <td>{order.client ? order.client.name : 'N/A'}</td>
                   <td>
                     <button class="border-0 text-light bg-white"><PencilSquare color="royalblue" size={25} /></button>{' '}
                     <button className="border-0 text-light bg-white" onClick={() => handleDelete(order.id, order.client.name)}><Trash color="red" size={25} /></button>
