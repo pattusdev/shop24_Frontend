@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import { Container, Row, Col, Card } from 'react-bootstrap'; // Import Bootstrap components
-import { BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import DrinkDetailsPage from './DrinkDetailsPage';
 import OrderDetailsPage from './OrderDetailsPage';
 import ReceiptDetailsPage from './ReceiptDetailsPage';
 import ClientDetailsPage from './ClientDetailsPage';
 import CargoDetailsPage from './CargoDetailsPage';
 import Navigation from './Navigation';
+import Footer from './Footer';
+import About from './About';
+import DashBoard from './Dashboard';
+import Home from './Home';
+import Contact from './Contact';
+
 
 
 function App() {
@@ -16,7 +21,6 @@ function App() {
   const [receipts, setReceipts] = useState([]);
   const [clients, setClients] = useState([]);
   const [cargos, setCargos] = useState([]);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -67,104 +71,27 @@ function App() {
 
     fetchData();
   }, []);
+  
 
   return (
     <Router>
       <Navigation/>
-      <Container>
       
-        <h4 className="mt-4 mb-4 text-secondary">DashBoard <a href="http://localhost:3000">Reload</a></h4>
-        <hr></hr>
-        <br></br>
-        
-        <Row>
-
-          {/* Drink */}
-
-            <Col md={3} className="mb-4">
-              <Card className="d-flex align-items-center justify-content-center dashboard-card "> 
-                <Card.Body>
-                  <Card.Title>Drinks</Card.Title>
-                  <Card.Text>
-                  {/* Render a link based on the length of drinks array */}
-                  <Link to={drinks.length > 0 ? '/drink-details' : '/'}style={{fontSize: '2rem', display: 'block', textAlign: 'center', textDecoration: 'none', fontWeight: 'bold' }}>{drinks.length}</Link>
-                </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            {/* Orders */}
-            
-            <Col md={3} className="mb-4">
-              <Card className="d-flex align-items-center justify-content-center dashboard-card">
-                <Card.Body>
-                  <Card.Title>Orders </Card.Title>
-                  <Card.Text>
-                  {/* Render a link based on the length of drinks array */}
-                  <Link to={orders.length > 0 ? '/order-details' : '/'} style={{fontSize: '2rem', display: 'block', textAlign: 'center', textDecoration: 'none', fontWeight: 'bold' }}>
-                    {orders.length}
-                  </Link>
-                </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            {/* Receipts */}
-
-            <Col md={3} className="mb-4">
-              <Card className="d-flex align-items-center justify-content-center dashboard-card">
-                <Card.Body>
-                  <Card.Title>Receipts</Card.Title>
-                  <Card.Text>
-                  {/* Render a link based on the length of drinks array */}
-                  <Link to={receipts.length > 0 ? '/receipts-details' : '/'}style={{fontSize: '2rem', display: 'block', textAlign: 'center', textDecoration: 'none', fontWeight: 'bold' }}>{receipts.length}</Link>
-                </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            {/* Clients */}
-
-            <Col md={3} className="mb-4">
-              <Card className="d-flex align-items-center justify-content-center dashboard-card">
-                <Card.Body>
-                  <Card.Title>Clients</Card.Title>
-                  <Card.Text>
-                  {/* Render a link based on the length of drinks array */}
-                  <Link to={clients.length > 0 ? '/clients-details' : '/'}style={{fontSize: '2rem', display: 'block', textAlign: 'center', textDecoration: 'none', fontWeight: 'bold' }}>{clients.length}</Link>
-                </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            
-            {/* Cargo */}
-
-            <Col md={3} className="mb-4">
-              <Card className="d-flex align-items-center justify-content-center dashboard-card">
-                <Card.Body>
-                  <Card.Title>Cargo</Card.Title>
-                  <Card.Text>
-                  {/* Render a link based on the length of drinks array */}
-                  <Link to={cargos.length > 0 ? '/cargos-details' : '/'}style={{fontSize: '2rem', display: 'block', textAlign: 'center', textDecoration: 'none', fontWeight: 'bold' }}>{cargos.length}</Link>
-                </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-        </Row>
-        
-        
-        
-      </Container>
       <Routes>
-        {/* Define the route for DrinkDetailsPage */}
         
         <Route path="/drink-details" element={<DrinkDetailsPage drinks={drinks} />} />
         <Route path="/order-details" element={<OrderDetailsPage orders={orders} />} />
         <Route path="/receipts-details" element={<ReceiptDetailsPage receipts={receipts} />} />
         <Route path="/clients-details" element={<ClientDetailsPage clients={clients} />} />
         <Route path="/cargos-details" element={<CargoDetailsPage cargos={cargos} />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/dashboard" element={<DashBoard />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+
+        
       </Routes>
-      
+      <Footer/>
     </Router>
   );
 }
