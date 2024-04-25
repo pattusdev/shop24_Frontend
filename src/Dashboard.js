@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Container, Row, Col, Card } from 'react-bootstrap'; // Import Bootstrap components
 import {Link} from 'react-router-dom';
+import { Repeat } from 'react-bootstrap-icons';
 
 function DashBoard(){
     const [drinks, setDrinks] = useState([]);
@@ -66,7 +67,7 @@ function DashBoard(){
           
           <Container>
           
-            <h4 className="display-3">DashBoard</h4>
+            <h4 className="display-3">DashBoard <a href="/dashboard"><Repeat color="royalblue" size={25} /></a></h4>
             <p className="lead">All Details</p>
             <hr></hr>
             <br></br>
