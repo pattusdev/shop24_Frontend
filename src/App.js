@@ -6,7 +6,7 @@ import OrderDetailsPage from './OrderDetailsPage';
 import ReceiptDetailsPage from './ReceiptDetailsPage';
 import ClientDetailsPage from './ClientDetailsPage';
 import CargoDetailsPage from './CargoDetailsPage';
-import Navigation from './Navigation';
+import Navigation from './Navigation'; // Import Navigation.js
 import Footer from './Footer';
 import About from './About';
 import DashBoard from './Dashboard';
