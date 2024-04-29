@@ -30,7 +30,7 @@ Shop24 and transport to their clients. They would like your help building these 
 
 • At the BPR PLC Bank, we currently have a microservices architecture with services mostly written in Spring Boot (Java or Kotlin).
 
-• We would like you to develop a single service in either Spring Boot that exposes several REST endpoints (see next page)
+• We would like you to develop a single service in either Spring Boot that exposes several REST endpoints (see next page.)
 
 • You can use whatever database you want (we recommend using SQLite, MySQL or Postgres)
 
@@ -60,9 +60,7 @@ This Shop24 react app needs to fetch data(JSON) from our server `http://localhos
 
 - ## Dashboard and CRUD Function
 
-
 - click on blue numbers to bring the table and this Dashboard is very responsive even if in Create and Delete automatic refresh no need to reload
-
 
 ![alt text](image-2.png)
 
