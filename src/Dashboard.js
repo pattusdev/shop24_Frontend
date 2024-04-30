@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Container, Row, Col, Card } from 'react-bootstrap'; // Import Bootstrap components
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom'; // import Link form React Router Dom
 import { Repeat } from 'react-bootstrap-icons'; // Import Repeat from React boostrap icon
 
 function DashBoard(){
