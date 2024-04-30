@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import DrinkDetailsPage from './DrinkDetailsPage';
+import DrinkDetailsPage from './DrinkDetailsPage'; // Import DrinkDetailsPage.js
 import OrderDetailsPage from './OrderDetailsPage';
 import ReceiptDetailsPage from './ReceiptDetailsPage';
 import ClientDetailsPage from './ClientDetailsPage';
