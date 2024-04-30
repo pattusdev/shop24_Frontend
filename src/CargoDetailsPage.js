@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Trash } from 'react-bootstrap-icons';
-import { PencilSquare } from 'react-bootstrap-icons';
+import { PencilSquare } from 'react-bootstrap-icons'; // Import PencilSquare from React Bootstrap Icons
 import DashBoard from './Dashboard'; // Im[ort Dashboard.js]
 
 
