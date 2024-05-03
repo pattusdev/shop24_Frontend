@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import DrinkDetailsPage from './DrinkDetailsPage';
+import DrinkDetailsPage from './DrinkDetailsPage'; // Import DrinkDetailsPage.js
 
 function Main() {
   return (
