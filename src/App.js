@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import DrinkDetailsPage from './DrinkDetailsPage'; // Import DrinkDetailsPage.js
 import OrderDetailsPage from './OrderDetailsPage';
 import ReceiptDetailsPage from './ReceiptDetailsPage';
-import ClientDetailsPage from './ClientDetailsPage';
+import ClientDetailsPage from './ClientDetailsPage'; // Import ClientDetailsPage.js
 import CargoDetailsPage from './CargoDetailsPage'; // Import CargoDetailsPage.js 
 import Navigation from './Navigation'; // Import Navigation.js
 import Footer from './Footer';
