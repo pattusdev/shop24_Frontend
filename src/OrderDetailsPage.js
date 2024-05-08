@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Trash } from 'react-bootstrap-icons';
-import { PencilSquare } from 'react-bootstrap-icons';
+import { PencilSquare } from 'react-bootstrap-icons';// import PencilSquare from react boostrap icons
 import DashBoard from './Dashboard'; // Import Dashboard.js
 
 function OrderDetailsPage() {
